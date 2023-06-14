@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LandingController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\PemilikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,7 @@ Auth::routes();
 
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('/user/home', [HomeController::class, 'userHome'])->name('user.home');
+Route::get('/koleksi', [HomeController::class, 'userKoleksi'])->name('user.koleksi');
+Route::get('/detail', [HomeController::class, 'userDetail'])->name('user.detail');
+
+Route::resource('pemilik', PemilikController::class);
