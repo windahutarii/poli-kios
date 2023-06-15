@@ -30,6 +30,6 @@ class LandingController extends Controller
     public function koleksiDetail($id)
     {
         $detail = TbKios::find($id);
-        return view('user.detail', compact('detail'));
+        return view('user.koleksi_detail', compact('detail'));
     }
 }

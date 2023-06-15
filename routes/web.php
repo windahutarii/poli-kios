@@ -32,4 +32,4 @@ Route::resource('kios', KiosController::class);
 
 // landing
 Route::get('/koleksi', [LandingController::class, 'koleksi'])->name('user.koleksi');
-Route::get('/koleksi/{$id}', [LandingController::class, 'koleksiDetail'])->name('user.detail');
+Route::get('/detail/{id}', [LandingController::class, 'koleksiDetail'])->name('user.kios.detail');
