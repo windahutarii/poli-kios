@@ -15,9 +15,10 @@ class KiosController extends Controller
      */
     public function index()
     {
-        //
-        // $data_kios = TbKios::all();
-        // return view("admin.home", compact("data_kios"));
+        $kios = TbKios::with('pemilik')->get();
+        $pemilik = TbKios::all();
+        $pemilik2 = TbKios::all();
+        return view("admin.kios", compact('kios', 'pemilik', 'pemilik2'));
     }
 
     /**
@@ -36,7 +37,7 @@ class KiosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-  
+
     public function store(Request $request)
     {
         $request->validate([

@@ -34,6 +34,18 @@
     </div>
     <script src="{{ asset('dist/jquery/jquery-3.6.3.min.js') }}"></script>
     <script src="{{ asset('dist/bootstrap5/js/bootstrap.bundle.min.js') }}"></script>
+
+    <script src="{{ asset('dist/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('dist/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('dist/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('dist/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('dist/owlcarousel/owl.carousel.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('dist/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ asset('dist/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('dist/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ asset('js/main.js') }}" type="text/javascript"></script>
 </body>
 
 </html>

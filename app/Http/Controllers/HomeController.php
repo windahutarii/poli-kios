@@ -26,11 +26,7 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        $kios = TbKios::with('pemilik')->get();
-        $pemilik = TbPemilik::all();
-        $pemilik2 = TbPemilik::all();
-        $kios = TbKios::with('pemilik')->get();
-        return view('admin.home', compact('pemilik', 'kios', 'pemilik2'));
+        return view('admin.home');
 
         //return view::make('admin.home')->with(compact('pemilik'))->with(compact('kios'));
     }

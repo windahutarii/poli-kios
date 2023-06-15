@@ -15,14 +15,13 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('dist/bootstrap5/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="{{ asset('css/modal.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
 </head>
-<style>
-    #toast-container>.toast-success {
-        background-color: green;
-    }
-</style>
+@yield('css')
 
 <body>
     @include('layouts.partials.navbar')
@@ -34,6 +33,9 @@
     <script src="{{ asset('dist/jquery/jquery-3.6.3.min.js') }}"></script>
     <script src="{{ asset('dist/bootstrap5/js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+
+    @yield('script')
     <script>
         @if (Session::has('success'))
             toastr.options = {

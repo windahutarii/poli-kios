@@ -24,12 +24,14 @@
                             <div class="row g-2">
                                 <div class="col-md-6">
                                     <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            placeholder="Check out" data-target="#date2" data-toggle="datetimepicker" />
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +60,8 @@
                             <div class="room-item shadow rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid" src="img/room-1.jpg" alt="">
-                                    <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Rp
+                                    <small
+                                        class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Rp
                                         {{ $kios->harga_jual }}/bulan</small>
                                 </div>
                                 <div class="p-4 mt-2">
@@ -66,13 +69,15 @@
                                         <h5 class="mb-0">{{ $kios->nama_kios }}</h5>
                                     </div>
                                     <div class="d-flex mb-3">
-                                        <small class="border-end me-3 pe-3"><i class="fa fa-arrows-alt text-primary me-2"></i>{{ $kios->luas_bangunan }}
+                                        <small class="border-end me-3 pe-3"><i
+                                                class="fa fa-arrows-alt text-primary me-2"></i>{{ $kios->luas_bangunan }}
                                             m<sup>2</sup></small>
                                         <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                     </div>
                                     <p class="text-body mb-3">{{ $kios->deskripsi }}</p>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="{{ route('user.kios.detail', $kios->id_kios) }}">Detail</a>
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4"
+                                            href="{{ route('user.detail', $kios->id_kios) }}">Detail</a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Sewa sekarang</a>
                                     </div>
                                 </div>

@@ -15,8 +15,8 @@ class PemilikController extends Controller
      */
     public function index()
     {
-        $data_pemilik = TbPemilik::all();
-        return view("admin.home", compact("data_pemilik"));
+        $pemilik = TbPemilik::all();
+        return view("admin.pemilik", compact("pemilik"));
     }
 
     /**
