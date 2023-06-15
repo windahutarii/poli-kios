@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TbPemilik;
 use App\Models\TbKios;
+use App\Models\TbPemilik;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,6 +26,7 @@ class HomeController extends Controller
 
     public function adminHome()
     {
+        $kios = TbKios::with('pemilik')->get();
         $pemilik = TbPemilik::all();
         $pemilik2 = TbPemilik::all();
         $kios = TbKios::with('pemilik')->get();
