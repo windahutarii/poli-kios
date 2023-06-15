@@ -124,7 +124,7 @@ class PemilikController extends Controller
         }
         $pemilik->save();
 
-        return redirect()->route('admin.home')->with('success', 'Data pemilik berhasil diubah');
+        return redirect()->route('admin.home')->with('success', 'Data pemilik berhasil di update');
     }
 
     /**

@@ -10,10 +10,7 @@ class TbKios extends Model
     use HasFactory;
 
     protected $guarded = ["id_kios"];
-
-    protected $table = "tb_kios";
-
-
+    protected $primaryKey = "id_kios";
     public function pemilik()
     {
         return $this->belongsTo(TbPemilik::class, 'id_pemilik', 'id_pemilik');

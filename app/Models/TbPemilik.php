@@ -9,8 +9,6 @@ class TbPemilik extends Model
 {
     use HasFactory;
 
-    protected $table = "tb_pemiliks";
-
     protected $primaryKey = "id_pemilik";
 
     protected $fillable = [
