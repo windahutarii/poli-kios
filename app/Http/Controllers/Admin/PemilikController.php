@@ -107,22 +107,7 @@ class PemilikController extends Controller
             'foto' => 'image | mimes:jpeg,png,jpg,gif,svg | max:2048'
         ]);
 
-        // TbPemilik::where('id_pemilik', $id)->update([
-        //     'nama_pemilik' => $request->nama_pemilik,
-        //     'alamat' => $request->alamat,
-        //     'email' => $request->email,
-        //     'perusahaan' => $request->perusahaan,
-        //     'no_hp' => $request->no_hp,
-        //     'no_wa' => $request->no_wa,
-        //     'foto' => $request->foto,
-        // ]);
-        // if ($request->hasFile('foto')) {
-        //     $request->file('foto')->move('uploads/anggota/profil/', $request->file('foto')->getClientOriginalName());
-        //     $request->pemilik()->update([
-        //         'foto' => $request->file('foto')->getClientOriginalName(),
-        //     ]);
-        // }
-        $pemilik = TbPemilik::find($id, 'id_pemilik');
+        $pemilik = TbPemilik::find($id);
         $pemilik->nama_pemilik = $request->nama_pemilik;
         $pemilik->alamat = $request->alamat;
         $pemilik->email = $request->email;
@@ -138,7 +123,7 @@ class PemilikController extends Controller
         }
         $pemilik->save();
 
-        return redirect()->route('admin.home')->with('success', 'Data pemilik berhasil di hapus');
+        return redirect()->route('admin.home')->with('success', 'Data pemilik berhasil di update');
     }
 
     /**
