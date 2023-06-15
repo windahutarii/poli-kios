@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app')
 @section('title', 'Koleksi')
 
 @section('content')
@@ -55,7 +55,7 @@
                 </div>
                 <div class="row g-4">
 
-                    @foreach ($kios as $kios)
+                    @foreach ($koleksi as $kios)
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="room-item shadow rounded overflow-hidden">
                                 <div class="position-relative">

@@ -24,8 +24,12 @@ Auth::routes();
 
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('/user/home', [HomeController::class, 'userHome'])->name('user.home');
-Route::get('/koleksi', [HomeController::class, 'userKoleksi'])->name('user.koleksi');
-Route::get('/detail/{$1}', [HomeController::class, 'userDetail'])->name('user.detail');
+// Route::get('/koleksi', [HomeController::class, 'userKoleksi'])->name('user.koleksi');
+// Route::get('/detail/{$id}', [HomeController::class, 'userDetail'])->name('user.detail');
 
 Route::resource('pemilik', PemilikController::class);
 Route::resource('kios', KiosController::class);
+
+// landing
+Route::get('/koleksi', [LandingController::class, 'koleksi'])->name('user.koleksi');
+Route::get('/koleksi/{$id}', [LandingController::class, 'koleksiDetail'])->name('user.detail');

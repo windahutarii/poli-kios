@@ -95,7 +95,8 @@ class KiosController extends Controller
      */
     public function show($id)
     {
-        //
+        $kios_detail = TbKios::find($id);
+        return route('user.detail', compact('kios_detail'));
     }
 
     /**

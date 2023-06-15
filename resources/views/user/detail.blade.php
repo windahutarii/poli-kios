@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app')
 @section('title', 'Detail')
 
 @section('content')
@@ -109,8 +109,8 @@
 
                         </div>
                         <!-- <div>
-                                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" >
-                                        </div> -->
+                                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" >
+                                            </div> -->
                     </div>
                 </div>
             </div>

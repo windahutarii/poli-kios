@@ -20,4 +20,16 @@ class LandingController extends Controller
         //return view("landing", compact("kios"));
         //return view('landing');
     }
+
+    public function koleksi()
+    {
+        $koleksi = TbKios::all();
+        return view('user.koleksi', compact('koleksi'));
+    }
+
+    public function koleksiDetail($id)
+    {
+        $detail = TbKios::find($id);
+        return view('user.detail', compact('detail'));
+    }
 }

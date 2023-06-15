@@ -12,8 +12,7 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">POLI KIOS</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Marketplace kios</h1>
-                                <a href="{{ route('user.koleksi') }}"
-                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"> Lihat
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"> Lihat
                                     Koleksi</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Sewa
                                     Sekarang</a>
@@ -156,8 +155,7 @@
                                     </div>
                                     <p class="text-body mb-3">{{ $kios->deskripsi }}</p>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-sm btn-primary rounded py-2 px-4"
-                                            href="{{ route('user.detail', $kios->id_kios) }}">Detail</a>
+                                        <a class="btn btn-sm btn-primary rounded py-2 px-4" href="#">Detail</a>
                                         <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Sewa sekarang</a>
                                     </div>
                                 </div>
