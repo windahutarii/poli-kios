@@ -97,6 +97,7 @@ class PemilikController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // id is not id but id_pemilik
         $request->validate([
             'nama_pemilik' => 'required',
             'alamat' => 'required',
