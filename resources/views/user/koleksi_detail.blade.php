@@ -24,14 +24,12 @@
                             <div class="row g-2">
                                 <div class="col-md-6">
                                     <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check out" data-target="#date2" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker" />
                                     </div>
                                 </div>
                             </div>
@@ -45,34 +43,34 @@
         </div>
         <!-- Booking End -->
 
-
         <!-- About Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">Detail Poli Kios</h6>
-                        <h1 class="mb-4">Amarta <span class="text-primary text-uppercase">Kios</span></h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam
-                            et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat
-                            amet</p>
+                        <h1 class="mb-4">{{ $detail->nama_kios }}</h1>
+                        <p class="mb-4">{{ $detail->deskripsi }}</p>
                         <div class="row g-3 pb-4">
-                            <div class="col-sm-3 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="p-1">
-                                    <div class="text-center p-4">
-                                        <i class="fa fa-wifi fa-2x text-primary mb-2"></i>
-                                        <p class="mb-0">Free WiFi</p>
+                            @if ($detail->wifi > 0)
+                                <div class="col-sm-3 wow fadeIn" data-wow-delay="0.1s">
+                                    <div class="p-1">
+                                        <div class="text-center p-4">
+                                            <i class="fa fa-wifi fa-2x text-primary mb-2"></i>
+                                            <p class="mb-0">Free WiFi</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="p-1">
-                                    <div class="text-center p-4">
-                                        <i class="fa fa-parking fa-2x text-primary mb-2"></i>
-                                        <p class="mb-0">Parking Area</p>
+                            @elseif ($detail->parkir > 0)
+                                <div class="col-sm-3 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="p-1">
+                                        <div class="text-center p-4">
+                                            <i class="fa fa-parking fa-2x text-primary mb-2"></i>
+                                            <p class="mb-0">Parking Area</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                             <div class="col-sm-3 wow fadeIn" data-wow-delay="0.5s">
                                 <div class="p-1">
                                     <div class="text-center p-4">
@@ -109,8 +107,8 @@
 
                         </div>
                         <!-- <div>
-                                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" >
-                                            </div> -->
+                                                                                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" >
+                                                                                            </div> -->
                     </div>
                 </div>
             </div>

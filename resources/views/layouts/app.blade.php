@@ -24,6 +24,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
+@yield('css')
 
 <body>
     @include('layouts.partials.navbar')
